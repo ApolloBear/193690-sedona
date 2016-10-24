@@ -6,7 +6,7 @@
 </head>
 <body>
 <header>
-    <a class="logo">лого</a>
+    <img class="logo" src="http://placehold.it/150x100" alt="logo">
     <nav class="navigation">
         <div class="navigation-left"><ul>
             <li><a href="#">Информация</a></li>
@@ -18,59 +18,59 @@
         </ul></div>
     </nav>
 </header>
-<div>
+<div class="main">
   <img class="welcome-picture" src="http://placehold.it/150x100" alt="Welcome to sedona">
-  <div>
+  <div class="promo-text">
     <h1>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
     <p class="p-black">Рассмотри 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
   </div>
   <div>
     <div class="first-advantage">
-      <div>
+      <section>
         <h2 class="h-white">Настоящий городок</h2>
         <p class="p-white">- №1 -</p>
         <p class="p-white">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-      </div>
-      <img class="picture-right" src="#" alt="house">
+        <img class="picture-right" src="#" alt="house">
+      </section>
     </div>
     <div class="leave">
-      <div>
+      <section>
         <h2 class="h-black">Жилье</h2>
         <p class="p-black">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-      </div>
-      <div>
+      </section
+      <section>
         <h2 class="h-black">Еда</h2>
         <p class="p-black">Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
-      </div>
-      <div>
+      </section>
+      <section>
         <h2 class="h-black">Сувениры</h2>
         <p class="p-black">Не только китайского, но и местного производства!</p>
-      </div>
+      </section>
     </div>
     <div class="second-advantage">
-      <img class="picture-left" src="#" alt="rock">
-      <div>
+      <section>
+        <img class="picture-left" src="#" alt="rock">
         <h2 class="h-white">Там есть мост дьявола</h2>
         <p class="p-white">- №2 -</p>
         <p class="p-white">Да по нему можно пройтись! Если конечно вы осмелитесь</p>
-      </div>
+      </section>
     </div>
       <div class="rest-advantage">
-          <div>
+          <section class="third-advantage">
               <h2 class="h-black">Небольшая площадь</h2>
               <p class="p-black">- №3 -</p>
               <p class="p-black">Все достопримечательности находятся очень близко</p>
-          </div>
-          <div>
+          </section>
+          <section class="fourth-advantage">
               <h2 class="h-black">Красивая дорога</h2>
               <p class="p-black">- №4 -</p>
               <p class="p-black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </div>
-          <div>
+          </section>
+          <section class="fifth-advantage">
               <h2 class="h-black">Мало туристов</h2>
               <p class="p-black">- №5 -</p>
               <p class="p-black">Большинство в Гранд Каньон и толпится там</p>
-          </div>
+          </section>
           <div>
               <h2>Заинтересовались?</h2>
               <p class="p-black">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
@@ -79,48 +79,46 @@
           </div>
           </div>
       </div>
-      <div>
+      <form>
+            <label>
+                Дата заезда:<input type="date" name="check-in" value="check-in">
+            </label>
+            <label>
+                Дата выезда:<input type="date" name="check-out" value="check-out">
+            </label>
+            <label>
+                Взрослые:<div class="adults">
+                <button class="btn-minus" type="button">-</button>
+                <input type="text" min="0" max="5">
+                <button class="btn-plus" type="button">+</button>
+                </div>
+            </label>
+            <label>
+                Дети:<div class="children">
+                <button class="btn-minus" type="button">-</button>
+                <input type="text" min="0" max="5">
+                <button class="btn-plus" type="button">+</button>
+                </div>
+            </label>
+            <button class="btn-search" type="sybmit">Найти</button>
+      </form>
+      <div class="map">
           <img src="http://placehold.it/150x100" alt="map">
-          <div>
-              <div><p><label for="arrival-date">Дата заезда:</label></p></div>
-              <div><input type="text" placeholder="24 апреля 2016" id="arrival-date"></div>
-          </div>
-          <div>
-            <div><p><label for="departure-date">Дата выезда:</label></p></div>
-            <div><input type="text" placeholder="4 июля 2016" id="departure-date"></div>
-          </div>
-          <div>
-              <div>
-                  <div><p>Взрослые:</p></div>
-                  <div><button type="buttom">-</button></div>
-                  <div><p>2</p></div>
-                  <div><button type="buttom">+</button></div>
-              </div>
-              <div>
-                  <div><p>Дети:</p></div>
-                  <div><button type="button">-</button></div>
-                  <div><p>0</p></div>
-                  <div><button type="button">+</button></div>
-              </div>
-          </div>
-          <div>
-              <a href="#">Найти</a>
-          </div>
       </div>
     </div>
   </div>
 <footer>
   <div>
-      <div>
+      <div class="footer-left">
           <a href="#">#VisitSedona</a>
       </div>
-      <div>
-          <div><a href="#">Twitter</a></div>
-          <div><a href="#">Facebook</a></div>
-          <div><a href="#">Youtube</a></div>
+      <div class="footer-center">
+          <a href="#"><img src="http://placehold.it/150x100" alt="Twitter"></a>
+          <a href="#"><img src="http://placehold.it/150x100" alt="Facebook"></a>
+          <a href="#"><img src="http://placehold.it/150x100" alt="Youtube"></a>
       </div>
-      <div>
-          <a href="#">HTML Academy</a>
+      <div class="footer-right">
+          <a href="#"><img src="http://placehold.it/150x100" alt="HTML Academy"></a>
       </div>
     </div>
 </footer>
