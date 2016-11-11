@@ -2,21 +2,73 @@ body {
   font-size: 14px;
   line-height: 26px;
   color: #424141;
-  font-weight:bold;
   font-family: "PT Sans";
-}
-header {
-  font-size: 14px;
-  line-height: 26px;
-  color: #000000;
   font-weight: bold;
-  font-family: "PT Sans";
+  width: 1200px;
 }
 
 h2 {
   font-size: 21px;
   line-height: 21px;
   color: #000000;
-  font-weight:regular;
   font-family: "PT Sans";
+  font-weight: bold;
+}
+
+strong {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-family: "PT Sans";
+  font-weight: bold;
+}
+
+header {
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: bold;
+  font-family: "PT Sans";
+  background-color: green;
+}
+
+footer {
+  background-color: green;
+}
+
+.logo {
+  position: relative;;
+  right: 531px;
+}
+
+.navigation ul li {
+  width: 239px;
+  display: inline-block;
+}
+
+.promo-text {
+  text-align: center;
+  background-color: #81b3d2;
+}
+
+.first-advantage {
+  width: 1200px;
+  background-color: yellow;
+}
+
+.first-advantage::after {
+  clear: both;
+}
+
+.first-advantage-text {
+  width: 400px;
+  padding-top: 57px;
+  float: left;
+  text-align: center;
+}
+
+.first-advantage-picture {
+  max-width: 800px;
+  max-height: 256px;
+  float: left;
 }

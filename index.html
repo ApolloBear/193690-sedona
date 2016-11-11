@@ -8,49 +8,53 @@
 <body>
     <div class="wrapper">
         <header>
-            <a><img class="logo" src="img/Layer 8.png" alt="logo" width="138px" height="70px"></a>
+            <a><img class="logo" src="img/Logo-sedona.png" alt="Логотип Седоны" width="138px" height="70px"></a>
             <nav class="navigation">
                 <ul>
                     <li><a href="#">Информация</a></li>
                     <li><a href="#">Фото и видио</a></li>
                     <li><a href="#">Карта штата</a></li>
-                    <li><a href="https://catalog.html">Гостиницы</a></li>
+                    <li><a href="catalog.html">Гостиницы</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="main-index">
-                <img class="welcome-picture" src="img/Layer 9.jpeg" alt="Welcome to Sedona" width="1200px" height="773px">
+                <img class="welcome-picture" src="img/Index-rocks.jpeg" alt="Добро пожаловать в Седону" width="1200px" height="773px">
                 <div class="promo-text">
                     <h1>Седона - небольшой городок в Аризоне,<br> заслуживающий большего!</h1>
                     <p class="text-style-1">Рассмотри 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
                 </div>
             </div>
             <div class="first-advantage">
-                <h2 class="subtitle-style-1">Настоящий городок</h2>
-                <span class="text-style-2">- №1 -</span>
-                <p class="text-style-2">Седона - не аттракцион для туристов, там течет своя жизнь</p>
-                <img class="picture-right" src="img/Layer 10.jpeg" alt="house" width="800px" height="401px">
+                <div class="first-advantage-text-1">
+                    <h2 class="subtitle-style-1">Настоящий городок</h2>
+                    <span class="text-style-2">- №1 -</span>
+                    <p class="text-style-2">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+                </div>
+                <img class="picture-right" src="img/Index-hotel.jpeg" alt="Отель" width="800px" height="401px">
             </div>
             <div class="leave">
-                <section>
+                <section class="leave-1">
                     <h2 class="subtitle-style-2">Жилье</h2>
                     <p class="text-style-1">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </section>
-                <section>
+                <section class="leave-2">
                     <h2 class="subtitle-style-2">Еда</h2>
                     <p class="text-style-1">Всегда заказывайте фирменный бургер,вы не разочаруетесь!</p>
                 </section>
-                <section>
+                <section class="leave-3">
                     <h2 class="subtitle-style-2">Сувениры</h2>
                     <p class="text-style-1">Не только китайского, но и местного производства!</p>
                 </section>
             </div>
             <div class="second-advantage">
-                <img class="picture-left" src="img/Layer 5" alt="rock" width="800px" height="400px">
-                <h2 class="subtitle-style-1">Там есть мост дьявола</h2>
-                <span class="text-style-2">- №2 -</span>
-                <p class="text-style-2">Да по нему можно пройтись! Если конечно вы осмелитесь</p>
+                <div class="first-advantage-text-2">
+                    <h2 class="subtitle-style-1">Там есть мост дьявола</h2>
+                    <span class="text-style-2">- №2 -</span>
+                    <p class="text-style-2">Да по нему можно пройтись! Если конечно вы осмелитесь</p>
+                </div>
+                <img class="picture-left" src="img/Index-canyon.jpeg" alt="Каньон" width="800px" height="400px">
             </div>
             <div class="rest-advantage">
                 <section class="third-advantage">
@@ -68,21 +72,21 @@
                     <span class="text-style-1">- №5 -</span>
                     <p class="text-style-1">Большинство в Гранд Каньон и толпится там</p>
                 </section>
-                <div>
-                    <h2>Заинтересовались?</h2>
-                    <p class="text-style-1">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-                    <a class="subtitle-style-1" href="#">Поиск гостиницы в Седоне</a>
-                </div>
+            </div>
+            <div>
+                <h2>Заинтересовались?</h2>
+                <p class="text-style-1">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+                <a class="subtitle-style-1" href="#">Поиск гостиницы в Седоне</a>
             </div>
             <form action="https://echo.htmlacademy.ru/">
                 <div>
-                    <label>Дата заезда:</label>
-                    <input type="text" name="check-in" value="">
+                    <label for="check-in">Дата заезда:</label>
+                    <input id="check-in" type="text" name="check-in" value="">
                     <button type="button"><img src="http://placehold.it/150x100" alt="Открыть календарь"></button>
                 </div>
                 <div>
-                    <label>Дата выезда:</label>
-                    <input type="text" name="check-out" value="">
+                    <label for="check-out">Дата выезда:</label>
+                    <input id="check-out" type="text" name="check-out" value="">
                     <button type="button"><img src="http://placehold.it/150x100" alt="Открыть календарь"></button>
                 </div>
                 <div>
@@ -100,7 +104,7 @@
                 <button class="btn-search" type="submit">Найти</button>
             </form>
             <div class="map">
-                <img src="img/map.jpeg" alt="map" width="1200px" height="593px">
+                <img src="img/Map-sedona.jpeg" alt="Карта Седоны" width="1200px" height="593px">
             </div>
         </main>
         <footer>
@@ -108,12 +112,12 @@
                 <span>#VisitSedona</span>
             </div>
             <div class="footer-center">
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Twitter"></a>
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Facebook"></a>
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Youtube"></a>
+                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Twitter" width="50px" height="50px"></a>
+                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Facebook" width="50px" height="50px"></a>
+                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Youtube" width="50px" height="50px"></a>
             </div>
             <div class="footer-right">
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="HTML Academy"></a>
+                <a href="#" target="_blank"><img src="img/Logo-html.png" alt="HTML Academy" width="50px" height="50px"></a>
             </div>
         </footer>
     </div>
