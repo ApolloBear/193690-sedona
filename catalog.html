@@ -13,10 +13,10 @@
             <a class="logo" href="index.html"><img src="img/Logo-sedona.png" alt="Логотип Седоны" width="138" height="70"></a>
                 <nav class="navigation">
                     <ul class="navigation-list">
-                        <li class="navigation-item"><a href="#">Информация</a></li>
-                        <li class="navigation-item"><a href="#">Фото и видио</a></li>
-                        <li class="navigation-item"><a href="#">Карта штата</a></li>
-                        <li class="navigation-item"><a>Гостиницы</a></li>
+                        <li class="navigation-item"><a class="navigation-item-a" href="#">Информация</a></li>
+                        <li class="navigation-item"><a class="navigation-item-a" href="#">Фото и видио</a></li>
+                        <li class="navigation-item"><a class="navigation-item-a" href="#">Карта штата</a></li>
+                        <li class="navigation-item"><a class="navigation-item-a">Гостиницы</a></li>
                     </ul>
                 </nav>
         </header>
@@ -24,7 +24,7 @@
             <div class="main-catalog">
                 <section class="form-filter">
                     <form class="catalog-form" action="https://echo.htmlacademy.ru/">
-                        <fieldset class="hotel-filter">
+                        <fieldset class="hotel-filter all-filter">
                             <legend class="hotel-filter-legend">Инфраструктура:</legend>
                             <input class="hotel-filter-input" type="checkbox" id="option-pool" name="pool">
                             <label class="hotel-filter-label" for="option-pool">Бассейн</label>
@@ -33,16 +33,16 @@
                             <input class="hotel-filter-input" type="checkbox" id="option-wifi" name="wi-fi">
                             <label class="hotel-filter-label" for="option-wifi">Wi-fi</label>
                         </fieldset>
-                        <fieldset class="hotel-filter">
+                        <fieldset class="hotel-filter all-filter">
                             <legend class="hotel-filter-legend">Тип жилья:</legend>
                             <input class="hotel-filter-input" type="checkbox" id="option-hotel" name="hotel">
                             <label class="hotel-filter-label" for="option-hotel">Гостиница</label>
                             <input class="hotel-filter-input" type="checkbox" id="option-motel" name="motel">
-                            <label class="hotel-filter-label" id="option-motel">Мотель</label>
+                            <label class="hotel-filter-label" for="option-motel">Мотель</label>
                             <input class="hotel-filter-input" type="checkbox" id="option-apartament" name="apartament">
                             <label class="hotel-filter-label" for="option-apartament">Апартаменты</label>
                         </fieldset>
-                        <fieldset class="hotel-price">
+                        <fieldset class="hotel-price all-filter">
                             <legend class="hotel-filter-legend">Стоимость в сутки (Р):</legend>
                             <div class="slider">
                                 <input class="slider-input" type="text" id="option-from">
@@ -60,12 +60,12 @@
                     </form>
                 </section>
                 <header class="sorting">
-                    <span class="sorting-block">Найдено: <output>3</output></span>
-                    <span class="sorting-block">Сортировка:</span>
+                    <span class="sorting-header">Найдено: <output>3</output></span>
+                    <span class="sorting-text">Сортировка:</span>
                     <div class="sorting-block">
-                        <a class="sorting-price" href="#">По цене</a></li>
-                        <a class="sorting-type" href="#">По типу</a></li>
-                        <a class="sorting-raiting" href="#">По рейтингу</a></li>
+                        <a class="sorting-price" href="#">По цене</a>
+                        <a class="sorting-type" href="#">По типу</a>
+                        <a class="sorting-raiting" href="#">По рейтингу</a>
                     </div>
                     <div class="sorting-block">
                         <a class="btn-up" href="#"><span class="invis-text">&#9650;</span></a>
@@ -116,19 +116,21 @@
                     <article class="hotel-block">
                         <div class="hotel-img"><img src="img/Img-hotel-3.jpg" alt="Апартаменты Villas at poco diablo" width="135" height="90"></div>
                         <div class="hotel-text">
-                            <strong class="hotel">Villas at poco diablo</strong>
+                            <strong class="hotel-name">Villas at poco diablo</strong>
                             <div class="subunit">
                                 <span class="hotel-type">Апартаменты</span>
                                 <a class="more-info" href="#">Подробнее</a>
-                            </div class="subunit">
+                            </div>
+                            <div class="subunit">
                                 <span class="hotel-price">От 4000 р.</span>
                                 <a class="boocking" href="#">Забронировать</a>
                             </div>
+                        </div>
                         <div class="hotel-raiting">
                             <span class="stars">&#9733;</span>
                             <span class="stars">&#9733;</span>
                             <span class="stars">&#9733;</span>
-                            <span class="hotel-rating-position">Рейтинг 9,2</spam>
+                            <span class="hotel-rating-position">Рейтинг 9,2</span>
                         </div>
                     </article>
                 </section>
