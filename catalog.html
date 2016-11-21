@@ -22,7 +22,7 @@
         </header>
         <main>
             <div class="main-catalog">
-                <section class="form-filter">
+                <section class="form-filter clearfix">
                     <form class="catalog-form" action="https://echo.htmlacademy.ru/">
                         <fieldset class="hotel-filter all-filter">
                             <legend class="hotel-filter-legend">Инфраструктура:</legend>
@@ -42,7 +42,7 @@
                             <input class="hotel-filter-input" type="checkbox" id="option-apartament" name="apartament">
                             <label class="hotel-filter-label" for="option-apartament">Апартаменты</label>
                         </fieldset>
-                        <fieldset class="hotel-price all-filter">
+                        <fieldset class="hotel-filter all-filter">
                             <legend class="hotel-filter-legend">Стоимость в сутки (Р):</legend>
                             <div class="slider">
                                 <input class="slider-input" type="text" id="option-from">
@@ -68,15 +68,15 @@
                         <a class="sorting-raiting" href="#">По рейтингу</a>
                     </div>
                     <div class="sorting-block">
-                        <a class="btn-up" href="#"><span class="invis-text">&#9650;</span></a>
-                        <a class="btn-down" href="#"><span class="invis-text">&#9660;</span></a>
+                        <a class="btn-up" href="#"><span class="invis-text">По возрастанию</span></a>
+                        <a class="btn-down" href="#"><span class="invis-text">По убыванию</span></a>
                     </div>
                 </header>
                 <section class="option">
                     <article class="hotel-block">
                         <div class="hotel-img"><img src="img/Img-hotel-1.jpg" alt="Гостиница Amara resort & SPA" width="135" height="90"></div>
-                        <div class="hotel-text">
-                            <strong class="hotel-name">Amara resort & SPA</strong>
+                        <div class="hotel-text clearfix">
+                            <a class="hotel-name-a" href="#"><strong class="hotel-name">Amara resort & SPA</strong></a>
                             <div class="subunit">
                                 <span class="hotel-type">Гостиница</span>
                                 <a class="more-info" href="#">Подробнее</a>
@@ -87,17 +87,19 @@
                             </div>
                         </div>
                         <div class="hotel-raiting">
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
+                            <div class="hotel-stars">
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                            </div>
                             <span class="hotel-rating-position">Рейтинг 8,5</span>
                         </div>
                     </article>
                     <article class="hotel-block">
                         <div class="hotel-img"><img src="img/Img-hotel-2.jpg" alt="Мотель Desert quail inn" width="135" height="90"></div>
-                        <div class="hotel-text">
-                            <strong class="hotel-name">Desert quail inn</strong>
+                        <div class="hotel-text clearfix">
+                            <a class="hotel-name-a" href="#"><strong class="hotel-name">Desert quail inn</strong></a>
                             <div class="subunit">
                                 <span class="hotel-type">Мотель</span>
                                 <a class="more-info" href="#">Подробнее</a>
@@ -108,15 +110,17 @@
                             </div>
                         </div>
                         <div class="hotel-raiting">
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
+                            <div class="hotel-stars">
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                            </div>
                             <span class="hotel-rating-position">Рейтинг 8,9</span>
                         </div>
                     </article>
                     <article class="hotel-block">
                         <div class="hotel-img"><img src="img/Img-hotel-3.jpg" alt="Апартаменты Villas at poco diablo" width="135" height="90"></div>
-                        <div class="hotel-text">
-                            <strong class="hotel-name">Villas at poco diablo</strong>
+                        <div class="hotel-text clearfix">
+                            <a class="hotel-name-a" href=""><strong class="hotel-name">Villas at poco diablo</strong></a>
                             <div class="subunit">
                                 <span class="hotel-type">Апартаменты</span>
                                 <a class="more-info" href="#">Подробнее</a>
@@ -127,9 +131,11 @@
                             </div>
                         </div>
                         <div class="hotel-raiting">
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
-                            <span class="stars">&#9733;</span>
+                            <div class="hotel-stars">
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                                <span class="stars">&#9733;</span>
+                            </div>
                             <span class="hotel-rating-position">Рейтинг 9,2</span>
                         </div>
                     </article>
@@ -141,12 +147,13 @@
                 <span class="footer-left-content">#VisitSedona</span>
             </div>
             <div class="footer-center">
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Twitter" width="46" height="48"></a>
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Facebook" width="46" height="48"></a>
-                <a href="#" target="_blank"><img src="http://placehold.it/150x100" alt="Youtube" width="46" height="48"></a>
+                <a class="footer-center-content icon-twitter" href="#" target="_blank"><span class="footer-center-name">Twitter</span></a>
+                <a class="footer-center-content icon-facebook" href="#" target="_blank"><span class="footer-center-name">Facebook</span></a>
+                <a class="footer-center-content icon-youtube" href="#" target="_blank"><span class="footer-center-name">Youtube</span></a>
             </div>
             <div class="footer-right">
-                <b>Website by</b><a href="#" target="_blank"><img src="img/Logo-html.png" alt="HTML Academy" width="133" height="39"></a>
+                <span class="footer-right-by">Website by</span>
+                <a class="footer-right-a" href="#" target="_blank"><img class="footer-right-img" src="img/Logo-html.png" alt="HTML Academy" width="113" height="39"></a>
             </div>
         </footer>
     </div>
