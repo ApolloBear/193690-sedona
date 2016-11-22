@@ -31,15 +31,30 @@ header {
   text-transform: uppercase;
 }
 
-.clearfix {
+.clearfix::after {
   display: table;
   content: "";
   clear: both;
 }
 
+.clearfix-text {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
 .wrapper {
   width: 1200px;
   margin: 0 auto;
+  box-shadow:
+    5px 0 15px rgba(0, 1 , 1, 0.2),
+    -5px 0 15px rgba(0, 1 , 1, 0.2);
+  background-color: #ffffff;
 }
 
 .navigation-item-a {
@@ -49,6 +64,7 @@ header {
 .logo {
   position: absolute;
   left: 531px;
+  top: 0;
 }
 
 .navigation-block {
@@ -117,7 +133,48 @@ header {
   color: #d6d0cc;
 }
 
+/* icon */
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: "symbols-sedona";
+  src: url("../fonts/symbols-sedona.woff") format("woff"),
+       url("../fonts/symbols-sedona.woff2") format("woff2");
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  vertical-align: baseline;
+  font-weight: normal;
+  line-height: 1em;
+  font-family: "symbols-sedona";
+  text-align: center;
+  text-transform: none;
+  text-decoration: inherit;
+  font-style: normal;
+  font-variant: normal;
+
+  speak: none;
+}
+
+.icon-facebook::before { content: "\66"; } /* "f" */
+.icon-twitter::before { content: "\74"; } /* "t" */
+.icon-check-off::before { content: "\2610"; } /* "☐" */
+.icon-check-on::before { content: "\2611"; } /* "☑" */
+.icon-calendar::before { content: "\e800"; } /* "" */
+.icon-youtube::before { content: "\f39e"; } /* "" */
+
 /* index.html */
+
+.compression {
+  margin-bottom: -120px;
+}
 
 .welcome-picture {
   display: block;
@@ -125,7 +182,7 @@ header {
 
 .promo-text {
   position: relative;
-  padding-top: 117px;
+  padding-top: 77px;
   padding-left: 6%;
   padding-right: 6%;
   margin-top: -57px;
@@ -145,7 +202,7 @@ header {
   font-size: 14px;
   line-height: 26px;
   color: #333333;
-  margin-bottom: 51px;
+  margin-bottom: 50px;
 }
 
 .first-advantage {
@@ -202,7 +259,7 @@ header {
 
 .picture-right {
   position: absolute;
-  top: -256px;
+  top: -340px;
   left: 0;
   display: block;
 }
@@ -378,12 +435,8 @@ header {
   box-shadow: 0 7px 15px rgba(0, 1 , 1, 0.15);
   text-align: left;
   background-color: #ffffff;
+  vertical-align: middle;
   /*transform: translateY(-5000px);*/
-}
-
-.index-form-icon {
-  font-size: 0;
-  line-height: 0;
 }
 
 .index-form-label {
@@ -427,9 +480,9 @@ header {
 
 .check-in .index-form-input {
   width: 293px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-right: 38px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   padding-left: 15px;
   float: right;
   margin-right: 4px;
@@ -439,9 +492,9 @@ header {
 
 .check-out .index-form-input {
   width: 293px;
-  padding-top: 5px;
+  padding-top: 10px;
   padding-right: 38px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   padding-left: 15px;
   float: right;
   margin-right: 4px;
@@ -449,12 +502,18 @@ header {
   background-color: #f2f2f2;
 }
 
-.index-form-input:hover {
+.index-form-input:link,
+.index-form-input:visited {
+  background-color: #f2f2f2;
+}
+
+.index-form-input:hover,
+.index-form-input:focus {
   background-color: #ebebeb;
 }
 
 .index-form-input:active {
-  background-color: transparent;
+  background-color: #ffffff;
   border: 1px solid #e5e5e5;
 }
 
@@ -496,6 +555,7 @@ header {
   width: 38px;
   height: 38px;
   font-size: 14px;
+  font-weight: bold;
   line-height: 26px;
   color: #a9a9a9;
   text-transform: uppercase;
@@ -503,6 +563,25 @@ header {
   outline: none;
   background-color: #f2f2f2;
   cursor: pointer;
+}
+
+.btn-plus:link,
+.btn-minus:link,
+.btn-plus:visited,
+.btn-minus:visited {
+  color: #a9a9a9;
+}
+
+.btn-plus:hover,
+.btn-minus:hover,
+.btn-plus:focus,
+.btn-minus:focus {
+  color: #000000;
+}
+
+.btn-plus:active,
+.btn-minus:active {
+  color: #81b3d2;
 }
 
 .btn-search {
@@ -527,15 +606,26 @@ header {
 .icon-calendar::before {
   content: "\e800";
   position: absolute;
-  left: -22px;
-  top: -5px;
+  left: -35px;
+  top: 1px;
 }
 
+.icon-calendar:link,
+.icon-calendar:visited {
+  color: #c2c2c2;
+}
+
+.icon-calendar:hover,
+.icon-calendar:focus {
+  color: #000000;
+}
+
+.icon-calendar:active {
+  color: #81b3d2;
+}
 /* footer */
 
 .footer-index {
-  position: absolute;
-  top: -120px;
   opacity: 0.9;
 }
 
@@ -569,12 +659,36 @@ header {
 }
 
 .footer-center-content {
-  font-size: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 5px;
+  background-color: #81b3d2;
+}
+
+.footer-center-content:link,
+.footer-center-content:visited {
+  background-color: #81b3d2;
+}
+
+.footer-center-content:hover,
+.footer-center-content:focus {
+  background-color: #669ec0;
+}
+
+.footer-center-content:active {
+  background-color: #5496bd;
+  color: #88b6d1;
 }
 
 .icon-twitter,
 .icon-facebook {
   margin-right: 6px;
+}
+
+.icon-twitter::before,
+.icon-facebook::before,
+.icon-youtube::before {
+  line-height: 45px;
 }
 
 .footer-right-img {
@@ -645,11 +759,23 @@ header {
 
 .hotel-filter-input:checked + .hotel-filter-label::after {
   content: "\2611";
+  font-size: 20px;
 }
 
 .hotel-filter-input:disabled + .hotel-filter-label::after {
-  content: "\2611";
+  content: "\2610";
   color: #6a6a6a;
+  font-size: 20px;
+}
+
+.hotel-filter-input .hotel-filter-label::before {
+  content: "\2610";
+  font-size: 20px;
+}
+
+.hotel-filter-input:checked .hotel-filter-label::before {
+  content: "\2611";
+  font-size: 20px;
 }
 
 .hotel-filter:nth-child(1) {
@@ -929,7 +1055,6 @@ header {
   padding-right: 183px;
   padding-bottom: 30px;
   position: relative;
-  background: silver;
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -1018,7 +1143,7 @@ header {
 }
 
 .subunit {
-  width: 116px;
+  max-width: 116px;
   float: left;
 }
 
@@ -1026,9 +1151,8 @@ header {
   min-height: 90px;
   width: 111px;
   position: absolute;
-  right: 0;
+  right: 73px;
   top: 30px;
-  margin-right: 73px;
   text-align: right;
 }
 
